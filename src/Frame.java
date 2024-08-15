@@ -40,7 +40,7 @@ class Frame extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 clickCount++;
                 updateClickCountLabel();
-                if (clickCount == 100000) {
+                if (clickCount == 10000) {
                     showWinScreen();
                 }
             }
