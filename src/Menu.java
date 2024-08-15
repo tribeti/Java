@@ -1,37 +1,36 @@
 import javax.swing.*;
-import java.awt.*;
-import java.awt.Frame;
 import java.awt.event.*;
 
 class Menu extends JFrame {
-    Menu () {
+    Menu() {
         this.setTitle("Chop");
+        this.setResizable(false);
         this.setSize(640, 800);
         this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(null);
 
         JButton play = new JButton("Play");
-        play.setBounds(100,300,100,50);
+        play.setBounds(270, 300, 100, 50);
+        play.setFocusable(false);
+        this.add(play);
+
         JButton quit = new JButton("Quit");
-        quit.setBounds(100,500,30,50);
+        quit.setBounds(270, 400, 100, 50);
+        quit.setFocusable(false);
+        this.add(quit);
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         play.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Frame gameFrame = new Frame();
+                gameFrame.setVisible(true);
+                dispose();
             }
         });
 
-        // exit
-        quit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
-
-        this.add(play);
-        this.add(quit);
+        quit.addActionListener(e -> System.exit(0));
         this.setVisible(true);
     }
 }

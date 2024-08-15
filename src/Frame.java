@@ -10,6 +10,7 @@ class Frame extends JFrame {
     Frame() {
         // Cài đặt tên, kích thước, vị trí cho cửa sổ
         this.setTitle("Chop");
+        this.setResizable(false);
         this.setSize(640, 800);
         this.setLocationRelativeTo(null);
         // Cho cửa sổ tắt hoàn toàn khi bấm nút thoát
