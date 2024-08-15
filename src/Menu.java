@@ -9,6 +9,10 @@ class Menu extends JFrame {
         this.setLocationRelativeTo(null);
         this.setLayout(null);
 
+        ImageIcon bg = new ImageIcon("bg.png");
+        JLabel background = new JLabel(bg);
+        this.add(background);
+
         JButton play = new JButton("Play");
         play.setBounds(270, 300, 100, 50);
         play.setFocusable(false);
