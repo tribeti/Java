@@ -74,11 +74,15 @@ class Frame extends JFrame {
         winLabel.setHorizontalAlignment(SwingConstants.CENTER);
         winLabel.setBounds(0, 0, 640, 800);
 
+        ImageIcon img = new ImageIcon("mep.jpg");
+        JLabel meo = new JLabel(img);
+
         JPanel winPanel = new JPanel();
         winPanel.setBackground(Color.BLACK);
         winPanel.setBounds(0, 0, 640, 800);
         winPanel.setLayout(new BorderLayout());
         winPanel.add(winLabel, BorderLayout.CENTER);
+        winPanel.add(meo);
 
         layer.add(winPanel, Integer.valueOf(1));
         layer.repaint();
