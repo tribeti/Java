@@ -9,7 +9,7 @@ class Frame extends JFrame {
 
     Frame() {
         // Cài đặt tên, kích thước, vị trí cho cửa sổ
-        this.setTitle("Test");
+        this.setTitle("Chop");
         this.setSize(640, 800);
         this.setLocationRelativeTo(null);
         // Cho cửa sổ tắt hoàn toàn khi bấm nút thoát
@@ -61,10 +61,12 @@ class Frame extends JFrame {
         this.setVisible(true);
     }
 
+    // Cập nhật điểm
     private void updateClickCountLabel() {
         clickCountLabel.setText(String.valueOf(clickCount));
     }
 
+    // hiển thị màn hình khi thắng
     private void showWinScreen() {
         layer.removeAll();
 
