@@ -21,12 +21,12 @@ class Frame extends JFrame {
         this.setContentPane(layer);
 
         // Nền
-        ImageIcon bg = new ImageIcon("grass.png");
+        ImageIcon bg = new ImageIcon("./img/grass.png");
         JLabel background = new JLabel(bg);
         background.setBounds(0, 0, 640, 800);
 
         // Vật thể (gỗ)
-        ImageIcon w = new ImageIcon("wood.png");
+        ImageIcon w = new ImageIcon("./img/wood.png");
         JLabel wood = new JLabel(w);
 
         // Đặt vị trí của wood ở giữa màn hình
@@ -77,7 +77,7 @@ class Frame extends JFrame {
         winLabel.setHorizontalAlignment(SwingConstants.CENTER);
         winLabel.setBounds(0, 0, 640, 800);
 
-        ImageIcon img = new ImageIcon("mep.jpg");
+        ImageIcon img = new ImageIcon("./img/mep.jpg");
         JLabel meo = new JLabel(img);
 
         JPanel winPanel = new JPanel();

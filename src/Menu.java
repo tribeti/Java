@@ -2,6 +2,7 @@ import javax.swing.*;
 
 class Menu extends JFrame {
     Menu() {
+        // Cài đặt tên, kích thước, vị trí cho cửa sổ
         this.setTitle("Chop");
         this.setResizable(false);
         this.setSize(640, 800);
@@ -12,11 +13,13 @@ class Menu extends JFrame {
         layer.setBounds(0, 0, 640, 800);
         this.setContentPane(layer);
 
-        ImageIcon bg = new ImageIcon("bg.png");
+        // nền
+        ImageIcon bg = new ImageIcon( "./img/bg.png");
         JLabel background = new JLabel(bg);
         background.setBounds(0, 0, 640, 800);
         layer.add(background, 1);
 
+        // nút
         JButton play = createStyledButton("Play", 270, 500);
         layer.add(play, Integer.valueOf(1));
 
@@ -25,6 +28,7 @@ class Menu extends JFrame {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // hành động của nút play và quit
         play.addActionListener(e -> {
             Frame gameFrame = new Frame();
             gameFrame.setVisible(true);
@@ -35,6 +39,7 @@ class Menu extends JFrame {
         this.setVisible(true);
     }
 
+    // hàm tạo nút
     private JButton createStyledButton(String text, int x, int y) {
         JButton button = new JButton(text);
         button.setBounds(x, y, 100, 50);
